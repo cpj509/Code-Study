@@ -44,3 +44,22 @@
 #     else:
 #         return height*height*21
 # print("키 {}cm {}의 표준 체중은 {}kg 입니다".format(height, gender, round(st_weight(height/100, gender),2)))
+
+# # quiz7
+# # input으로 입력받을 시 항상 str
+# # 내가 작성한 코드, install black and apply auto formatting setting(activate on save)
+# num = range(1, 4)
+# for i in num:
+#     reports = open("{}주차.txt".format(i), 'w', encoding='utf8')
+#     print("- {} 주차 주간보고 -".format(i), file=reports)
+#     print("부서 :", file=reports)
+#     print("이름 :", file=reports)
+#     print("업무 요약 :", file=reports)
+#     reports.close()
+# 정답 코드
+# for i in range(1, 51):
+#     with open(str(i)+"주차.txt", "w"m encoding="utf8") as report_files:
+#         report_file.write("- {0} 주차 주간보고 -".format(i))
+#         report_file.write("\n부서 :")
+#         report_file.write("\n이름 :")
+#         report_file.write("\n업무 요약 :")
