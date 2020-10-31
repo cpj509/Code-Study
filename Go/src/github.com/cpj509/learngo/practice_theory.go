@@ -2,7 +2,7 @@
 
 // import "fmt"
 
-//12.struct
+// //12.struct
 // type person struct {
 // 	name    string
 // 	age     int
