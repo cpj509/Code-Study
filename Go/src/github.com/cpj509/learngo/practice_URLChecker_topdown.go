@@ -10,7 +10,7 @@
 // var errRequestFailed = errors.New("Request fail.")
 
 // func main() {
-//	var results = make(map[string]string)
+// 	var results = make(map[string]string)
 // 	// results := map[string]string{} //위 코드와 같음
 // 	urls := []string{
 // 		"https://www.naver.com/",
