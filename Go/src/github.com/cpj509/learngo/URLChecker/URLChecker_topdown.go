@@ -1,5 +1,5 @@
 // //url checking topdown
-// package main
+// package URLChecker
 
 // import (
 // 	"errors"
@@ -9,7 +9,7 @@
 
 // var errRequestFailed = errors.New("Request fail.")
 
-// func main() {
+// func CheckURL() {
 // 	var results = make(map[string]string)
 // 	// results := map[string]string{} //위 코드와 같음
 // 	urls := []string{
