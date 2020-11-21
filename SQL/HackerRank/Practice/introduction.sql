@@ -61,6 +61,12 @@ order by length(city) desc, city asc limit 1;
 
 -- Weather Observation Station 6
 
-select city
+select distinct city
 from station
 where REGEXP_LIKE(city, '^A|^E|^I|^O|^U');
+
+-- Weather Observation Station 7
+
+select distinct city
+from station
+where REGEXP_LIKE(city, 'a$|e$|i$|o$|u$');
