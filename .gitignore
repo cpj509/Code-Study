@@ -3,4 +3,4 @@ pkg/
 .vscode/
 .vs/
 *.out
-.testinghall/
+testinghall/
