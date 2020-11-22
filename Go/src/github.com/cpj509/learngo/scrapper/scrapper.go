@@ -49,7 +49,7 @@ func getPage(page int, url string, mainC chan<- []extractedJob) {
 	res, err := http.Get(pageURL)
 	checkErr(err)
 	checkCode(res)
-	defer res.Body.Close() //invent memory leak
+	defer res.Body.Close() //prevent memory leak
 
 	doc, err := goquery.NewDocumentFromReader(res.Body)
 	checkErr(err)

@@ -70,3 +70,9 @@ where REGEXP_LIKE(city, '^A|^E|^I|^O|^U');
 select distinct city
 from station
 where REGEXP_LIKE(city, 'a$|e$|i$|o$|u$');
+
+Weather Observation Station 8
+
+select city
+from station
+where REGEXP_LIKE(city, '^[aeiou].*[aeiou]$', 'i');
