@@ -1,4 +1,5 @@
-//https://www.hackerrank.com/challenges/2d-array/problem
+// Day 11: 2D Arrays
+
 #include <bits/stdc++.h>
 
 using namespace std;
