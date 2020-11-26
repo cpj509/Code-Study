@@ -82,3 +82,9 @@ where REGEXP_LIKE(city, '^[aeiou].*[aeiou]$', 'i');
 select distinct city
 from station
 where regexp_like(city, '^[^aeiou]', 'i');
+
+-- Weather Observation Station 10
+
+select distinct city
+from station
+where regexp_like(city, '[^aeiou]$', 'i');
