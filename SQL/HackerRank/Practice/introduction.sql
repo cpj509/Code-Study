@@ -100,3 +100,9 @@ where regexp_like(city, '^[^aeiou]|[^aeiou]$', 'i');
 select distinct city
 from station
 where regexp_like(city, '^[^aeiou].*[^aeiou]$', 'i');
+
+-- Employee Names
+
+select name
+from employee
+order by name;
