@@ -106,3 +106,9 @@ where regexp_like(city, '^[^aeiou].*[^aeiou]$', 'i');
 select name
 from employee
 order by name;
+
+-- Employee Salaries
+
+select name
+from employee
+where salary > 2000 and months < 10;
