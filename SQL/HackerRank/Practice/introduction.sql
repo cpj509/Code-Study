@@ -125,3 +125,9 @@ select case
     else 'Not A Triangle'
     end
 from triangles;
+
+-- Revising Aggregations - The Count Function
+
+select count(name)
+from city
+where population > 100000;
