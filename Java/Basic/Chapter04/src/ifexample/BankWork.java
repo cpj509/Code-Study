@@ -33,6 +33,8 @@ public class BankWork {
 				System.out.println("your balance > " + balance);
 			} else if (selNum == 4) {
 				run = false;
+			} else {
+				System.out.println("Please input valid number.");
 			}
 		}
 		System.out.println("Complete");

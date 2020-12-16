@@ -12,6 +12,7 @@ public class Sample03 {
 		for (i = 1; i < 10; i++) {
 			System.out.println(dan * i);
 		}
+		scan.close();
 
 	}
 
