@@ -1,9 +1,11 @@
 bin/
+*.jar
 pkg/
 .vscode/
 .vs/
 *.out
 testinghall/
+META-INF
 .classpath
 .project
 .idea
