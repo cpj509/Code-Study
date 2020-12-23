@@ -7,12 +7,12 @@ import java.util.ArrayList;
 public class Student {
     int studentID;
     String studentName;
-    ArrayList<Subject> subjectList;
+    ArrayList<Subject> subjectList = new ArrayList<>();
 
     public Student(int studentID, String studentName){
         this.studentID = studentID;
         this.studentName = studentName;
-        subjectList = new ArrayList<>();
+//        subjectList = new ArrayList<>();//linb 10의 new array를 지우고 이렇게 내부에 넣어도 됨.
     }
 
     public void addSubject(String name, int score){
