@@ -1,6 +1,6 @@
 package collection.set;
 
-import java.util.HashSet;
+import collection.Member;
 
 public class MemberHashSetTest {
     public static void main(String[] args) {

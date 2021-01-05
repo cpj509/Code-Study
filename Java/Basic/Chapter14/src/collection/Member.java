@@ -1,4 +1,4 @@
-package collection.set;
+package collection;
 
 public class Member {
     private int memberID;
@@ -29,7 +29,7 @@ public class Member {
     public String toString() {
         return "Member name is " + memberName + " and member id is " + memberID;
     }
-
+//hashset에서는 equals, hashcode를 재정의 해야 중복을 방지하지만 map에서는 관계 없이 그냥 중복을 방지해줌.
     @Override
     public boolean equals(Object obj) {
         if(obj instanceof Member){

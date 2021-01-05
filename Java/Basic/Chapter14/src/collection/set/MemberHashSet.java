@@ -1,7 +1,8 @@
 package collection.set;
 
+import collection.Member;
+
 import java.util.HashSet;
-import java.util.Iterator;
 
 public class MemberHashSet {
     private HashSet<Member> hashSet;
