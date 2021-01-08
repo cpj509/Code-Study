@@ -14,10 +14,16 @@ public class BufferedReaderTest2 {
                 animal = line.split(" ");
             }
             assert animal != null;
+            //배열의 전체 데이터 출력
             for (String s:
                  animal) {
                 System.out.println(s);
             }
+            //랜덤하게 추출
+            int rand = (int)(Math.random()*animal.length);
+            System.out.println(animal[rand]);
+
+
         }catch (Exception e){
             e.printStackTrace();
         }
