@@ -1,0 +1,9 @@
+h1{
+    color: #0000ff;
+}
+p{
+    /* text-align: center; */
+    text-align: right;
+
+    line-height: 3.5;
+}

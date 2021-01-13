@@ -1,0 +1,11 @@
+body{
+    font-family: "궁서체";
+}
+
+h1{
+    font-size: 3.5em;
+}
+p{
+    /* font-size: 18px;  고정 크기   */
+    font-size: 1.2em;    
+}
