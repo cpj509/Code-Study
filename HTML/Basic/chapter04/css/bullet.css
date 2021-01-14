@@ -1,0 +1,4 @@
+ul li{
+    /* list-style-image: url("../images/dot.png"); */
+    list-style: url("../images/dot.png");/*상동*/
+}
