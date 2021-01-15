@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 폼 만들기</title>
+    <style>
+        #container{
+            width: 400px;
+            margin: 0 auto;
+        }
+        ul li{
+            list-style: none;
+            margin: 20px;
+        }
+
+        label{
+            width: 100px;
+            float: left;
+        }
+
+        /* 로그인 버튼 길이 조정 */
+        input[type="submit"]{
+            width: 250px;
+        }
+        
+        /* input[type="text"],[type="password"]{
+            height: 200px;
+        } */
+        .in{
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <form action="processLogin.jsp" method="POST">
+            <fieldset>
+                <legend>로그인 정보</legend>
+                <ul>
+                    <li>
+                        <label for="userid">아이디</label>
+                        <input type="text" id="userid" class="in">
+                    </li>
+                    <li>
+                        <label for="userpw">비밀번호</label>
+                        <input type="password" id="userpw" class="in">
+                    </li>
+                    <li>
+                        <input type="submit" value="로그인">
+                    </li>
+            </ul>
+            </fieldset>
+
+        </form>
+
+    </div>
+    
+</body>
+</html>
