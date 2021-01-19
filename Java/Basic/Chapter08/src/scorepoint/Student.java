@@ -22,13 +22,20 @@ public class Student {
     public void showInfo(){
         int total = 0;
         double avg = 0.0;
-//        Subject subject = new Subject();
-        for (Subject subject:
-             subjectList) {
+        //일반 for문
+        for (int i = 0; i < subjectList.size(); i++) {
+            Subject subject = subjectList.get(i);
             total += subject.getScorePoint();
             System.out.printf("Student %s's %s score is %d.\n",
                     studentName, subject.getSubjectName(), subject.getScorePoint());
         }
+        //향상된 for문
+//        for (Subject subject:
+//             subjectList) {
+//            total += subject.getScorePoint();
+//            System.out.printf("Student %s's %s score is %d.\n",
+//                    studentName, subject.getSubjectName(), subject.getScorePoint());
+//        }
         System.out.println("Total score : " + total);
         avg = total / subjectList.size();
         System.out.printf("Average Score : %.2f", avg);
