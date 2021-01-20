@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrap{
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            position: relative;
+            /* absolute를 원활하게 사용하려면 wrap이 relative여야 함. */
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            position: absolute;
+        }
+        #a1{
+            top: 0;
+            left: 0;
+        }
+        #a2{
+            top: 0;
+            right: 0;
+        }
+        #a3{
+            bottom: 0;
+            left: 0;
+        }
+        #a4{
+            bottom: 0;
+            right: 0;
+        }
+        #a5{
+            top: 50px;
+            left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box" id="a1"></div>
+        <div class="box" id="a2"></div>
+        <div class="box" id="a3"></div>
+        <div class="box" id="a4"></div>
+        <div class="box" id="a5"></div>
+    </div>
+    
+</body>
+</html>
