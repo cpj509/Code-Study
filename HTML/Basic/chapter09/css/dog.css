@@ -1,5 +1,6 @@
 header{
-    width: 90%;
+    width: 80%;
+    /* height: 50px; */
     margin: 0 auto;
     padding: 10px;
     background-color: blanchedalmond;
@@ -26,9 +27,35 @@ article{
     overflow: hidden;
 }
 article section{
-    width: 28%; /* article의 28% */
+    width: 30%; /* article의 28% */
+    height: 650px;
     float: left;
     border: 1px dotted violet;
     margin: 5px;
     padding: 5px;
+}
+section h3{
+    background: url(../images/bg-note.png) no-repeat;
+    padding: 30px;
+}
+aside{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    clear: both;
+    background-color: #00ff00;
+}
+aside ul li{
+    margin: 5px;
+}
+footer{
+    width: 80%;
+    padding: 10px;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+}
+footer p{
+    text-align: center;
+    font-size: 1.3em;
 }

@@ -1,0 +1,26 @@
+#bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;    /* 최소 너비가 브라우저와 같음 */
+    max-width: 100%;
+    z-index: -10;
+    background: url("../images/flame.jpg") no-repeat left top;
+    background-size: cover;
+}
+#content{
+    /* position: relative; */
+    margin-top: 30%;    
+    /* 위치가 브라우저의 위에서 30% 떨어져서 위치 */
+    margin-left: 40%;
+}
+h2{
+    font-size: 2em;
+}
+h1{
+    font-size: 3em;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
