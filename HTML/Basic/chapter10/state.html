@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form fieldset{
+            margin-bottom: 20px;
+        }
+        form legend{
+            font-weight: bold;
+            font-size: 15px;
+        }
+        input:disabled{ /* 가상 선택자(:disabled)로 스타일 적용 */
+            background: #666;
+            border: 1px solid red;
+        }
+        input:checked + span{   /* 가상 선택자(:checked)로 스타일 적용 */
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <label for="">이름 <input type="text" disabled></label>
+        </fieldset>
+        <fieldset>
+            <legend>신청 과목</legend>
+            <p>이 달에 신청 할 과목을 선택하세요</p>
+            <label for=""><input type="radio" name="subject" value="speaking"><span>회화</span></label>
+            <label for=""><input type="radio" name="subject" value="grammer"><span>문법</span></label>
+            <label for=""><input type="radio" name="subject" value="writing"><span>작문</span></label>
+        </fieldset>
+    </form>
+</body>
+</html>

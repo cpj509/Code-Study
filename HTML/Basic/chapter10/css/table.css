@@ -1,0 +1,20 @@
+table, h1{
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+table, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td{
+    color:chartreuse;
+    padding: 10px;
+    
+}
+tr:nth-child(2n+1){
+    background-color: red;
+}
+tr:nth-child(2n){
+    background-color: blue;
+}
