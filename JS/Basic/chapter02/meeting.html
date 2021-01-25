@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>간단한 소개팅 구현</title>
+</head>
+<body>
+    <script>
+        var gender = prompt("성별을 입력하세요.", "여성");
+        var age = prompt("나이를 입력하세요.", "20");
+        var result = false;
+        if(gender == "여성"){
+            if(20 <= age && age < 30){
+                result = true;
+            }
+        }
+
+        document.write("결과 : " + result);
+
+
+    </script>
+</body>
+</html>
