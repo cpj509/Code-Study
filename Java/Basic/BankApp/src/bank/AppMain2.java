@@ -41,68 +41,15 @@ public class AppMain2 {
         sc.close();
     }
 
-    private static void withdraw() {
-        System.out.println("----------");
-        System.out.println("출금");
-        System.out.println("----------");
-        System.out.print("계좌번호 : ");
-        String accountNum = sc.next();
-        System.out.print("출금액 : ");
-        int money = sc.nextInt();
-
-        try {
-            Account account = findAccount(accountNum);
-            assert account != null;
-            if(account.getBalance() - money < 0){
-                System.out.println("잔액이 부족합니다.");
-                System.out.println("처리 결과 : 출금에 실패하였습니다.");
-                return;
+    private static int checkMoney(){//음수 금액 체크
+        while(true) {
+            int money = sc.nextInt();
+            if(money < 1){
+                System.out.println("입금 가능 액수는 1원 이상입니다.");
+                System.out.println("다시 입력 해 주세요.");
             }
-            account.setBalance(account.getBalance() - money);
-            System.out.println("처리 결과 : 출금에 성공하였습니다.");
-        } catch (Exception e) {
-            System.out.println("계좌를 찾을 수 없습니다.");
-            System.out.println("처리 결과 : 출금에 실패하였습니다.");
-        }
-    }
-
-    private static void deposit() {
-        System.out.println("----------");
-        System.out.println("입금");
-        System.out.println("----------");
-        System.out.print("계좌번호 : ");
-        String accountNum = sc.next();
-        System.out.print("입금액 : ");
-        int money = sc.nextInt();
-
-        try {
-            Account account = findAccount(accountNum);
-            assert account != null;
-            account.setBalance(account.getBalance() + money);
-            System.out.println("처리 결과 : 입금에 성공하였습니다.");
-        } catch (NullPointerException e) {
-            System.out.println("계좌를 찾을 수 없습니다.");
-            System.out.println("처리 결과 : 입금에 실패하였습니다.");
-        }
-    }
-
-    private static Account findAccount(String accountNum) {
-        Account account = null;
-        for (Account value : accountArrayList) {
-            if (value.getAccountNum().equals(accountNum)) {//외부 입력계좌와 일치하면
-                account = value;
-                return account;
-            }
-        }
-        return null;
-    }
-
-    private static void accountList() {
-        System.out.println("----------");
-        System.out.println("계좌 목록");
-        System.out.println("----------");
-        for (Account account : accountArrayList) {
-            account.showInfo();
+            else
+                return money;
         }
     }
 
@@ -125,15 +72,80 @@ public class AppMain2 {
             }
             break;
         }
-
         System.out.print("계좌주 : ");
         String owner = sc.next();
 
         System.out.print("초기 입금액 : ");
-        int balance = sc.nextInt();
+        int balance = checkMoney();
 
         Account newAccount = new Account(accountNum, owner, balance);
         accountArrayList.add(newAccount);
         System.out.println("처리 결과 : 정상 처리 되었습니다.");
+    }
+
+    private static void deposit() {
+        System.out.println("----------");
+        System.out.println("입금");
+        System.out.println("----------");
+        System.out.print("계좌번호 : ");
+        String accountNum = sc.next();
+        System.out.print("입금액 : ");
+        int money = checkMoney();
+        try {
+            Account account = findAccount(accountNum);
+            assert account != null;
+            account.setBalance(account.getBalance() + money);
+            account.showInfo();
+            System.out.println("처리 결과 : 입금에 성공하였습니다.");
+        } catch (NullPointerException e) {
+            System.out.println("계좌를 찾을 수 없습니다.");
+            System.out.println("처리 결과 : 입금에 실패하였습니다.");
+        }
+    }
+
+    private static void withdraw() {
+        System.out.println("----------");
+        System.out.println("출금");
+        System.out.println("----------");
+        System.out.print("계좌번호 : ");
+        String accountNum = sc.next();
+        System.out.print("출금액 : ");
+        int money = checkMoney();
+
+        try {
+            Account account = findAccount(accountNum);
+            assert account != null;
+            if(account.getBalance() - money < 0){
+                System.out.println("잔액이 부족합니다.");
+                System.out.println("처리 결과 : 출금에 실패하였습니다.");
+                return;
+            }
+            account.setBalance(account.getBalance() - money);
+            account.showInfo();
+            System.out.println("처리 결과 : 출금에 성공하였습니다.");
+        } catch (Exception e) {
+            System.out.println("계좌를 찾을 수 없습니다.");
+            System.out.println("처리 결과 : 출금에 실패하였습니다.");
+        }
+    }
+
+    private static Account findAccount(String accountNum) {
+        Account account = null;
+        for (Account value : accountArrayList) {
+            if (value.getAccountNum().equals(accountNum)) {//외부 입력계좌와 일치하면
+                account = value;
+                return account;
+            }
+        }
+        return null;
+    }
+
+    private static void accountList() {
+        System.out.println("----------");
+        System.out.println("계좌 목록");
+        System.out.println("----------");
+        for (Account account : accountArrayList) {
+            account.showInfo();
+        }
     }
 }

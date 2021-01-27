@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>지역 변수(Local Variable)의 유효 범위</h2>
+    <script>
+        var x = 1;
+        function oneUp(){
+            return ++x;
+        }
+        var num = oneUp();
+        console.log(num);
+        console.log(x);
+    </script>
+</body>
+</html>

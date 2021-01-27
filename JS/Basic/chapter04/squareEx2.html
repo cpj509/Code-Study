@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            margin-top: 50px;
+        }
+        button{
+            font-size: 2em;
+        }
+        p{
+            font-size: 3em;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="square(7)">계산하기</button>
+    <h2>계산 결과</h2>
+    <p id="demo"></p>
+    <script>
+        // 익명 함수로 정의
+        var square = function(x){
+            var result = x * x;
+            document.getElementById("demo").innerHTML = result;
+        }
+    </script>
+    
+</body>
+</html>
