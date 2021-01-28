@@ -26,8 +26,8 @@
     </div>
     <script>
         function calcPrice(){
-            var originPrice = 10000;
-            var rate = 20;
+            var originPrice = document.getElementById("oPrice").value;
+            var rate = document.getElementById("rate").value;
             document.getElementById("showResult").innerHTML = 
             "상품의 원래 가격은 " + originPrice + "원 이고, 할인율은 " + rate + "% 입니다.<br>할인된 가격은 " + (originPrice - (originPrice * rate / 100)) + "원 입니다."
         }

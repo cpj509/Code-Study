@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 정의하기</title>
+</head>
+<body>
+    <script>
+        //객체 생성
+        var person = {
+            name:"KDB",
+            age:29,
+            isMerried:true,
+
+            play : function(){  //메서드 속성 : 함수
+                alert("홈런을 칩니다.")
+            }
+        }
+        document.write(person.name+'<br>');
+        document.write(person.age+'<br>');
+        document.write(person.isMerried+'<br>');
+        person.play();
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>문자열의 위치 찾기</h2>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction(){
+            var str = "Hello world, welcome to the world";
+            var n = str.indexOf("world");  // 값이 없다면 -1
+            var n2 = str.lastIndexOf("world");  // 뒤에서 부터 탐색해서 index를 알려줌
+            // document.getElementById("demo").innerHTML = n;
+            document.getElementById("demo").innerHTML = n2;
+        }
+    </script>
+    
+</body>
+</html>

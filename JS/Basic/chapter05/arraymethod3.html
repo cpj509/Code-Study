@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>배열의 요소를 합치기, 구분 기호 연결하기</h2>
+    <script>
+        var numbers = [1, 2, 3];
+        var chars = ['a', 'b', 'c'];
+
+        // 두 배열 합치기 - concat()
+        var list = numbers.concat(chars);
+        console.log(list);
+
+        // 구분 기호 연결하기 - join() -> 매개 변수로 구분 기호 전달
+        console.log(list.join());
+        console.log(list.join('+'));
+        console.log(list.join('-'));
+    </script>
+</body>
+</html>
