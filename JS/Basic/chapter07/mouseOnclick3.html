@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <img src="images/girl.png" alt="girl" class="pic">
+    </div>
+    <script>
+        //onclick을 자바스크립트에서 사용
+        var img = document.querySelector(".pic")
+        //함수 내에서 한 번 만 작동 할 때에는 괄호를 빼야함
+        img.onclick = changePic
+
+        function changePic(){
+            img.src = "images/boy.png"
+        }
+        // img.onclick = function(){
+        //     img.src = "images/boy.png"
+        // }
+    </script>
+</body>
+</html>

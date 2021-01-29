@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <!-- <img src="images/girl.png" alt="girl" id="pic" onclick="changePic()"> -->
+        <img src="images/girl.png" alt="girl" class="pic" onclick="changePic()">
+    </div>
+    <script>
+        function changePic(){
+            // document.getElementById("pic").src = "images/boy.png";
+            // var img = document.getElementById("pic");
+            var img = document.querySelector(".pic"); //class 선택자에 접근
+            img.src = "images/boy.png"
+        }
+    </script>
+</body>
+</html>

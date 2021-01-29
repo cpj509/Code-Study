@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myBtn">Try it</button>
+    <p id="demo"></p>
+    <script>
+        var btn = document.getElementById("myBtn");
+        btn.addEventListener("click", displayDate);
+        //addEventListener - onclick에서 on을 붙이지 않음.
+        //displayDate에서 ()를 뺀 이름만 호출.
+
+        function displayDate(){
+            var d = new Date();
+            var date = d.toLocaleString();  //한글로 출력
+            document.getElementById("demo").innerHTML = date;
+        }
+    </script>
+    
+</body>
+</html>

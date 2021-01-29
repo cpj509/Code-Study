@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name, age, isMerried){
+            this.name = name;
+            this.age = age;
+            this.isMerried = isMerried;
+
+            this.info = function(){
+                document.write(this.name + " " + this.age + " " + this.isMerried + "<br>");
+                this.isMerried == true ? document.write("기혼입니다.") : document.write("미혼입니다.");
+            }
+        }
+
+        //Person 객체 생성
+        var asd = new Person("asd", 123, true);
+        document.write(asd.name + "<br>");
+        document.write(asd.age + "<br>");
+        document.write(asd.isMerried + "<br>");
+        asd.info();
+    </script>
+    
+</body>
+</html>

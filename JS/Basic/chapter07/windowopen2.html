@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window 객체 사용하기</title>
+</head>
+<body>
+    <script>
+        var myWindow;
+        function openWin(){
+            myWindow = window.open("", "myWindow", "top=100, left=100, width=200, height=200");
+            myWindow.document.write("<p style='color:blue'>새 창 입니다.</p>")
+        }
+        function closeWin(){
+            myWindow.close();
+        }
+    </script>
+    <button onclick="openWin()">버튼1</button>
+    <button onclick="closeWin()">버튼2</button>
+    
+</body>
+</html>
