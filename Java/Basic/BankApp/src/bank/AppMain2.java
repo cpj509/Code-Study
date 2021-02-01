@@ -1,4 +1,11 @@
 package bank;
+/*
+ * 1. 계좌 생성 시 - 중복 오류 해결
+ * 2. 입, 출금 - 예외 처리(try catch)
+ * 3. 출금 - 잔액 부족 시 재 입력
+ * 4. 계좌 검색 기능 추가
+ * 5. 계좌 삭제 기능 추가
+ */
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -12,7 +19,7 @@ public class AppMain2 {
         while(run){
             System.out.println("---------------------------------------");
             System.out.println("1. 계좌 생성 | 2. 계좌 목록 " +
-                    "| 3. 입금 | 4. 출금 | 5. 종료");
+                    "| 3. 입금 | 4. 출금 | 5. 계좌 검색 | 6. 계좌 삭제 | 7. 종료");
             System.out.println("---------------------------------------");
             System.out.print(">");
 
@@ -31,6 +38,12 @@ public class AppMain2 {
                     withdraw();
                     break;
                 case 5:
+                    selectAccount();
+                    break;
+                case 6:
+                    removeAccount();
+                    break;
+                case 7:
                     run = false;
                     break;
                 default:
@@ -39,6 +52,32 @@ public class AppMain2 {
         }
         System.out.println("프로그램 종료");
         sc.close();
+    }
+
+    private static void selectAccount() {
+        System.out.println("검색 할 계좌의 계좌번호를 입력 해 주세요.");
+        String accountNum = sc.next();
+        try {
+            Account account = findAccount(accountNum);
+            assert account != null;
+            account.showInfo();
+        } catch (Exception e) {
+            System.out.println("계좌를 찾을 수 없습니다.");
+        }
+    }
+
+    private static void removeAccount() {
+        System.out.println("삭제 할 계좌의 계좌번호를 입력 해 주세요.");
+        String accountNum = sc.next();
+        try {
+            Account account = findAccount(accountNum);
+            if(account == null)
+                throw null;
+            accountArrayList.remove(account);
+            System.out.println("삭제를 완료 했습니다.");
+        } catch (Exception e) {
+            System.out.println("계좌를 찾을 수 없습니다.");
+        }
     }
 
     private static int checkMoney(){//음수 금액 체크

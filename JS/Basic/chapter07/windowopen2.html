@@ -7,10 +7,12 @@
 </head>
 <body>
     <script>
-        var myWindow;
+        var myWindow;   //새 창
+
         function openWin(){
             myWindow = window.open("", "myWindow", "top=100, left=100, width=200, height=200");
             myWindow.document.write("<p style='color:blue'>새 창 입니다.</p>")
+            myWindow.document.write("<a href='javascript:window.close()'>창 닫기</a>")
         }
         function closeWin(){
             myWindow.close();

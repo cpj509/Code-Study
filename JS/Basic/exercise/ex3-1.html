@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //생성자 함수(클래스)
+        function Member1(name, id, age, address){
+            this.name = name
+            this.id = id
+            this.age = age
+            this.address = address
+            this.info = function(){
+                document.write(this.name);
+                document.write("<br>")
+                document.write(this.id);
+                document.write("<br>")
+                document.write(this.age);
+                document.write("<br>")
+                document.write(this.address);
+            }
+        }
+
+        var mem1 = new Member1("choi", 001, 27, "Seoul")
+        mem1.info();
+        
+    </script>
+    
+</body>
+</html>
