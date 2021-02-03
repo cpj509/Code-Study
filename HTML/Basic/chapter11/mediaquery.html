@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>document</title>
+    <style>
+        body{   /* 너비가 1024px 초과 시 */
+            background: url("images/bg0.jpg") no-repeat;
+            background-size: cover;
+        }
+        @media screen and (max-width: 1024px) { /* pc 기준 */
+            body{
+                background: url("images/bg1.jpg") no-repeat;
+                background-size: cover;
+            }
+        }
+        @media screen and (max-width: 768px){   /* 태블릿 기준 */
+            body{
+                background: url("images/bg2.jpg") no-repeat;
+                background-size: cover;
+            }
+        }
+        @media screen and (max-width: 384px){   /* 모바일 기준 */
+            body{
+                background: url("images/bg3.jpg") no-repeat;
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    
+</body>
+</html>
