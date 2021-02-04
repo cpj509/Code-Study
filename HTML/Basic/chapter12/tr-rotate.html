@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origin{
+            width: 210px;
+            height: 200px;
+            border: 1px solid #ccc;
+            float: left;
+            margin: 50px;
+        }
+        #rotate1:hover{
+            -webkit-transform: rotate(30deg);   /* 크롬 사파리 */
+            -ms-transform: rotate(30deg);   /* 인터넷 익스플로러 */
+            transform: rotate(30deg);
+        }
+        #rotate2:hover{
+            -webkit-transform: rotate(-30deg);   /* 크롬 사파리 */
+            -ms-transform: rotate(-30deg);   /* 인터넷 익스플로러 */
+            transform: rotate(-30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="origin">
+        <div id="rotate1">
+            <img src="images/fruit.jpg" alt="">
+        </div>
+    </div>
+    <div class="origin">
+        <div id="rotate2">
+            <img src="images/fruit.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>

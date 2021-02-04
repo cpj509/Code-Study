@@ -1,0 +1,24 @@
+.prod-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.prod-list li{
+    float: left;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.prod-list .caption{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 200px; /* margin 값 무시 */
+    color: #fff;
+    text-align: center;
+}
+.prod-list li:hover .caption{
+    transform: translateY(-200px);
+    transition-duration: 0.5s;
+}
