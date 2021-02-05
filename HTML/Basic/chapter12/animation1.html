@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation1</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+
+            animation-name: change-bg;  /* 애니메이션 이름 */
+            animation-duration: 3s; /* 지속 시간 - 3초 */
+            animation-iteration-count: infinite;   /* 반복 */
+        }
+
+        @keyframes change-bg {
+            from{
+                background-color: deepskyblue;
+                border: 3px solid #000;
+            }
+            to{
+                background-color: gold;
+                border: 1px solid #000;
+                border-radius: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    
+</body>
+</html>

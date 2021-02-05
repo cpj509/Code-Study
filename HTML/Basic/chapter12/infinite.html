@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation - infinite</title>
+    <style>
+        #box1{
+            margin: 100px 0 0 100px;
+            height: 60px;
+            padding: 10px;
+            
+            /* animation-direction: alternate; 처음부터 시작이 아니라 종료점에서 다시 시작. normal이 default.*/
+            animation: moving 3s infinite alternate;
+        }
+
+        @keyframes moving {
+            from{
+                background-color: chocolate;
+                width: 200px;
+                transform: rotate(0) scale(0.5);
+                opacity: 0.5;
+            }
+            to{
+                background-color: crimson;
+                width: 400px;
+                transform: rotate(15deg) scale(2);
+                opacity: 1.0;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <h3>CSS3 Animation</h3>
+    </div>
+</body>
+</html>
