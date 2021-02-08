@@ -2,11 +2,11 @@
 var bigPic = document.querySelector("#cup");
 
 //작은 사진 모두 선택 - 배열
-var smallPic = document.querySelectorAll(".small");
+var smallPics = document.querySelectorAll(".small");
 
 // //onclick 이벤트
 // for(var i = 0; i < smallPic.length; i++){
-//     smallPic[i].onclick = showBig;
+//     smallPics[i].onclick = showBig;
 // }
 
 // function showBig(){
@@ -15,8 +15,8 @@ var smallPic = document.querySelectorAll(".small");
 //     //setAttribute("속성", "속성값")
 
 //addEventListener() 사용
-for(var i = 0; i < smallPic.length; i++){
-    smallPic[i].addEventListener("click", function(){
+for(var i = 0; i < smallPics.length; i++){
+    smallPics[i].addEventListener("click", function(){
         var newPic = this.src;
         bigPic.setAttribute("src", newPic);
     })

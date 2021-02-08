@@ -1,0 +1,52 @@
+#container{
+    width: 700px;
+    margin: 0 auto;
+}
+.small{
+    width: 60px;
+    height: 60px;
+}
+#small-pic{
+    margin: 20px 50px;
+}
+#prod-pic{
+    float: left;
+    margin: 20px;
+}
+#cup{
+    margin-left: 50px;
+}
+#desc{
+    width: 300px;
+    padding-top: 20px;
+    float: left;
+}
+#desc li{
+    list-style: none;
+    line-height: 2em;
+}
+button{
+    width: 100%;
+    padding: 10px;
+    margin: 20px 0;
+}
+#view{
+    text-decoration: none;
+    padding-left: 40px;
+    color: black;
+}
+hr{
+    clear: both;
+    border: 1px dotted #ccc;
+}
+#detail{
+    display: none;
+}
+#detail li{
+    line-height: 1.5em;
+}
+h3{font-size: 1.3em;}
+p{
+    line-height: 1.5em;
+    text-align: justify;    /* 양 쪽 정렬 */
+}

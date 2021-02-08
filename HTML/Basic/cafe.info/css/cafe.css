@@ -12,10 +12,11 @@ header{
     background: url("../images/header.jpg") no-repeat;
     background-size: cover;
 }
-
-nav{
-    height: 50px;
+#navbar{
+    position: fixed;
+    top: 0;
     background: black;
+    width: 100%;
 }
 #main-nav{
     text-align: center;
@@ -92,9 +93,12 @@ footer{
 /* pc */
 @media screen and (min-width: 995px){
     #container{
-        width: 995px;
+        width: 80%;
         margin: 0 auto;
         border: 1px solid #ccc;
+    }
+    #navbar{
+        width: 80%;
     }
     header{
         height: 400px;
