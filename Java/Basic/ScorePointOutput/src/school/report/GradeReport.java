@@ -3,6 +3,7 @@ package school.report;
 import grade.BasicEvaluation;
 import grade.GradeEvaluation;
 import grade.MajorEvaluation;
+import grade.PassFailEvaluation;
 import school.School;
 import school.Score;
 import school.Student;
@@ -64,14 +65,17 @@ public class GradeReport {
         ArrayList<Score> scoreList = student.getScoreList();
         int majorId = student.getMajorSubject().getSubjectId();
 
-        GradeEvaluation[] gradeEvaluation = {new BasicEvaluation(), new MajorEvaluation()};
+        GradeEvaluation[] gradeEvaluation = {new BasicEvaluation(), new MajorEvaluation(), new PassFailEvaluation()};
 
         for (Score score : scoreList) {
             if (score.getSubject().getSubjectId() == subjectId) {
                 String grade = "";
                 if (score.getSubject().getSubjectId() == majorId) {
                     grade = gradeEvaluation[Define.SAB_TYPE].getGrade(score.getPoint());
-                } else {
+                }else if(score.getSubject().getGradeType() == Define.PF_TYPE){
+                    grade = gradeEvaluation[Define.PF_TYPE].getGrade(score.getPoint());
+                }
+                else {
                     grade = gradeEvaluation[Define.AB_TYPE].getGrade(score.getPoint());
                 }
                 buffer.append(score.getPoint());
