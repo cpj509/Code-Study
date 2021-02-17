@@ -1,3 +1,4 @@
+<%@page import="java.util.Calendar"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,8 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
-	<p>방문 해 주셔서 감사합니다.</p>
-	<%@ include file="footer.jsp" %>
+	<p>이 페이지는 1초 마다 새로고침 됩니다.</p>
+	<%
+		response.setIntHeader("Refresh", 1);
+	%>
+	<%=Calendar.getInstance().getTime() %>
+
 </body>
 </html>

@@ -7,8 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
-	<p>방문 해 주셔서 감사합니다.</p>
-	<%@ include file="footer.jsp" %>
+<h2>response 객체</h2>
+<%
+	response.sendRedirect("process.jsp");
+%>
+
 </body>
 </html>

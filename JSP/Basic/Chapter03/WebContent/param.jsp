@@ -7,8 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
-	<p>방문 해 주셔서 감사합니다.</p>
-	<%@ include file="footer.jsp" %>
+    <h2>param 액션 태그</h2>
+    <jsp:forward page="param_data.jsp">
+        <jsp:param value="admin" name="id"/>
+        <jsp:param value="1234" name="passwd"/>
+    </jsp:forward>
 </body>
 </html>

@@ -7,8 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
-	<p>방문 해 주셔서 감사합니다.</p>
-	<%@ include file="footer.jsp" %>
+	<form action="process.jsp" method="post">
+		<p>
+			<label for="name">이름 : </label>
+			<input type="text" id="name" name="name" />
+		</p>
+		<p>
+			<input type="submit" value="등록" />
+		</p>
+	</form>
 </body>
 </html>

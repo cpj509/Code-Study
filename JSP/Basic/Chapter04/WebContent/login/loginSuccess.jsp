@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
-	<p>방문 해 주셔서 감사합니다.</p>
-	<%@ include file="footer.jsp" %>
+	<h3>로그인을 성공 했습니다.</h3>
 </body>
 </html>

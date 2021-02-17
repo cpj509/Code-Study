@@ -7,8 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
-	<p>방문 해 주셔서 감사합니다.</p>
-	<%@ include file="footer.jsp" %>
+	<h3>로그인을 실패 했습니다.</h3>
+	<p><a href="loginForm.html">로그인 화면으로 돌아가기</a></p>
 </body>
 </html>

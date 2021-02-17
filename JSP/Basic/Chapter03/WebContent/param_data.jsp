@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Action Tag</title>
 </head>
 <body>
-	<%@ include file="header.jsp" %>
-	<p>방문 해 주셔서 감사합니다.</p>
-	<%@ include file="footer.jsp" %>
+	<p>아이디 : <%=request.getParameter("id") %></p>
+	<p>비밀번호 : <%= request.getParameter("passwd") %></p>
 </body>
 </html>
