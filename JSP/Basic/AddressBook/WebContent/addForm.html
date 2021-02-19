@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" type="text/css" href="css/address.css">
+<body>
+	<div id="container">
+		<h2>주소 등록</h2>
+		<hr />
+		<form action="addrAdd.jsp" method="post">
+			<table>
+				<tr>
+					<td>이름</td>
+					<td><input type="text" name="username" maxlength="20" size="20" /></td>
+				</tr>
+				<tr>
+					<td>전화번호</td>
+					<td><input type="tel" name="tel" maxlength="20" size="20"/></td>
+				</tr>
+				<tr>
+					<td>이메일</td>
+					<td><input type="email" name="email" maxlength="20" size="20"/></td>
+				</tr>
+				<tr>
+					<td>성별</td>
+					<td>
+						<select name="sex">
+							<option value="남성" selected>남성</option>
+							<option value="여성">여성</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="확인" />
+						<input type="reset" value="취소" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
