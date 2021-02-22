@@ -15,5 +15,30 @@ public class AddrBookDAO {
 	public ArrayList<AddrBook> getListAll(){
 		return addrList;
 	}
-
+	
+	//林家 昏力
+	public void removeAddress(String username) {
+		int i = 0;
+		for(i = 0; i < addrList.size(); i++) {
+			AddrBook addrBook = addrList.get(i);
+			String dbUser = addrBook.getUsername();
+			if(dbUser.equals(username))
+				break;
+		}
+		addrList.remove(i);
+	}
+	
+	//漂沥 林家 惑技 焊扁
+	public AddrBook getAbByUserName(String username) {
+		AddrBook abByUsername = null;
+		for(int i = 0; i < addrList.size(); i++) {
+			AddrBook ab = addrList.get(i);
+			String dbUser = ab.getUsername();
+			if(dbUser.equals(username)) {
+				abByUsername = ab;
+				break;
+			}
+		}
+		return abByUsername;
+	}
 }
