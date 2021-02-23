@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="session_process.jsp" method="post"></form>
+	<form action="session_process.jsp" method="post">
 		<p>
 			<label for="id">아이디 : </label>
 			<input type="text" name="userid" />
@@ -17,5 +17,6 @@
 			<input type="text" name="passwd" />
 		</p>
 		<p><input type="submit" value="전송" /></p>
+	</form>
 </body>
 </html>
