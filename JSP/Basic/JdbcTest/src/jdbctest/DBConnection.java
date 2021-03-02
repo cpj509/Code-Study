@@ -21,7 +21,7 @@ public class DBConnection {
 			System.out.println("DB 연결 성공 " + conn);
 			
 			//학생 추가
-			String sql = "INSERT INTO t_student VALUES(103, '산들')";
+			String sql = "INSERT INTO t_student VALUES(104, '그마')";
 			pstmt = conn.prepareStatement(sql);	//sql 처리 할 객체 생성(연결)
 			pstmt.executeUpdate();	//수행 완료
 		} catch (Exception e) {
