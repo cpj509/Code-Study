@@ -86,4 +86,49 @@ public class AddrBookDAO {
 		}
 		return addrList;
 	}
+	
+//	주소 상세 보기(1명)
+	public AddrBook getOneDB(int num) {
+		connDB();
+		AddrBook addrBook = new AddrBook();
+		String sql = "SELECT * FROM t_address WHERE num = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, num);	//입력번호를 세팅
+			rs = pstmt.executeQuery();
+			rs.next();	//1개의 자료
+			addrBook.setNum(rs.getInt("num"));
+			addrBook.setUsername(rs.getString("username"));
+			addrBook.setTel(rs.getString("tel"));
+			addrBook.setEmail(rs.getString("email"));
+			addrBook.setGender(rs.getString("gender"));
+			addrBook.setJoinDate(rs.getDate("joinDate"));
+			rs.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			disconnect();
+		}
+		return addrBook;
+		
+	}
+	
+//	주소 삭제
+	public void removeAddress(int num) {
+		connDB();
+		String sql = "DELETE FROM t_address WHERE num = ?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			disconnect();
+		}
+	}
 }
