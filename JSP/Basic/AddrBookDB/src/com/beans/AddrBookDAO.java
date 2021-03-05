@@ -6,6 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class AddrBookDAO {
 	private static String driverClass = "oracle.jdbc.OracleDriver";
@@ -63,7 +64,7 @@ public class AddrBookDAO {
 	public ArrayList<AddrBook> getListAll(){
 		connDB();
 		ArrayList<AddrBook> addrList = new ArrayList<>();
-		String sql = "select * from t_address";
+		String sql = "select * from t_address order by num";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
@@ -75,6 +76,7 @@ public class AddrBookDAO {
 				addrBook.setEmail(rs.getString("email"));
 				addrBook.setGender(rs.getString("gender"));
 				addrBook.setJoinDate(rs.getDate("joinDate"));
+				
 				
 				addrList.add(addrBook);
 			}
@@ -130,5 +132,46 @@ public class AddrBookDAO {
 		}finally {
 			disconnect();
 		}
+	}
+//	주소 수정
+	public void updateAddress(AddrBook addrBook) {
+		connDB();
+		String sql = "update t_address set username=?, tel=?, email=?, gender=? where num=?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, addrBook.getUsername());	//
+			pstmt.setString(2, addrBook.getTel());
+			pstmt.setString(3, addrBook.getEmail());
+			pstmt.setString(4, addrBook.getGender());
+			pstmt.setInt(5, addrBook.getNum());
+			
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			disconnect();
+		}
+	}
+	
+//	로그인 체크
+	public boolean checkLogin(String email) {
+		connDB();
+		String sql = "select email from t_address where email=?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();	//DB에 있는 email 가져오기.
+			if(rs.next())
+				return true;	//이메일 일치(존재함.)
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			disconnect();
+		}
+		return false;	//이메일 불 일치(잘못 입력 했거나 존재하지 않음.)
 	}
 }

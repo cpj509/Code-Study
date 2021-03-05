@@ -10,15 +10,26 @@
 </head>
 <body>
 <jsp:useBean id="abDAO" class="com.beans.AddrBookDAO" scope="application"></jsp:useBean>
+<%
+	String sessionId = null;
+if(session.getAttribute("sessionId") != null){
+	sessionId = (String)session.getAttribute("sessionId");
+}else{
+	out.println("<script>");
+	out.println("alert('로그인이 필요합니다.')");
+	out.println("location.href='loginForm.jsp'");	//로그인 페이지로 돌아감
+	out.println("</script>");
+}
+%>
 	<div id="container">
 		<h2>주소 목록</h2>
-		<p><a href="addrForm.html">주소 추가</a></p>
+		<p><a href="logout.jsp">[로그 아웃]</a></p>
 		<table>
 			<tr>
 				<td>번호</td>
 				<td>이름</td>
-				<td>가입일</td>
 				<td>성별</td>
+				<td>가입일</td>
 				<td>회원보기</td>
 			</tr>
 			<%
