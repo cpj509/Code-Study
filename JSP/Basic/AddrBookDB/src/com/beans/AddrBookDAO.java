@@ -174,4 +174,24 @@ public class AddrBookDAO {
 		}
 		return false;	//이메일 불 일치(잘못 입력 했거나 존재하지 않음.)
 	}
+	
+	//로그인시 이름 반환 메서드
+	public String returnName(String email) {
+		connDB();
+		String sql = "select username from t_address where email=?";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();	//DB에 있는 email 가져오기.
+			if(rs.next())
+				return rs.getString("username");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			disconnect();
+		}
+		return null;	//이메일 불 일치(잘못 입력 했거나 존재하지 않음.)
+	}
 }

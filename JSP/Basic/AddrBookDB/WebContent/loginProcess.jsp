@@ -24,7 +24,8 @@
 %>
 </body>
 	<div id="container">
-		<h2><%=session.getAttribute("sessionId") %>으로 로그인 되었습니다.</h2>
+		<!--  <h2><%=session.getAttribute("sessionId") %>으로 로그인 되었습니다.</h2> -->
+		<h2><%=abDAO.returnName((String)session.getAttribute("sessionId")) %>으로 로그인 되었습니다.</h2>s
 		<a href="addrList.jsp">[목록 보기]</a>
 	</div>
 </html>

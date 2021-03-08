@@ -19,7 +19,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input type="submit" value="등록" />
+						<input type="submit" value="로그인" />
 						<input type="reset" value="취소" />
 					</td>
 				</tr>
