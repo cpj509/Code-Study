@@ -12,7 +12,7 @@
 </head>
 <body>
 <%
-	String realFolder = "D:\\GitHub\\Code-Study\\JSP\\Basic\\Chapter10\\WebContent\\upload";	//절대 경로
+	String realFolder = "C:/Users/JMP Korea/Documents/Code-Study/JSP/Basic/Chapter10/WebContent/upload";	//절대 경로
 	MultipartRequest multi = new MultipartRequest(request, realFolder, 5*1024*1024, "utf-8", new DefaultFileRenamePolicy());
 	
 	//폼의 요청 name을 가져오기

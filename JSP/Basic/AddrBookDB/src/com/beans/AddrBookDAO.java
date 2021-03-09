@@ -11,7 +11,7 @@ import java.util.Collections;
 public class AddrBookDAO {
 	private static String driverClass = "oracle.jdbc.OracleDriver";
 	private static String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private static String username = "HR";
+	private static String username = "hr";
 	private static String password = "1234";
 	
 	private Connection conn = null;
