@@ -1,0 +1,44 @@
+@charset "UTF-8";
+#container{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.title{
+	height: 150px;
+	font-size: 1.7em;
+	background: #eee;
+	line-height: 130px;
+	margin-bottom: 50px;
+}
+nav{
+	text-align: right;
+	font-size: 1.2em;
+}
+nav ul{
+	list-style: none;
+}
+nav ul li{
+	display: inline;
+	padding: 10px 20px;
+	margin-right: 20px;
+	border-top: 3px solid #222;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #000;
+}
+nav ul li:hover {
+	background: #ccc;
+}
+
+table{
+	width: 400px;
+	margin: 0 auto;
+}
+table, td{
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+	height: 30px;
+	padding: 5px;
+}

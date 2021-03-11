@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class AddrBook implements Serializable {
-	private static final long serialVersionUID = 201203;
+	private static final long serialVersionUID = 201203L;
 	
 	private int num;
 	private String username;

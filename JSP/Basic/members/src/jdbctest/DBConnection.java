@@ -8,8 +8,8 @@ import java.sql.SQLException;
 public class DBConnection {
 	private static String driverClass = "oracle.jdbc.OracleDriver";
 	private static String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	private static String username = "jweb";	//사용자(DB)
-	private static String password = "4321";	//비밀번호
+	private static String username = "HR";	//사용자(DB)
+	private static String password = "1234";	//비밀번호
 	
 	private static Connection conn = null;	//클래스
 	private static PreparedStatement pstmt = null;	//인스턴스
@@ -21,9 +21,9 @@ public class DBConnection {
 			System.out.println("DB 연결 성공 " + conn);
 			
 			//학생 추가
-//			String sql = "INSERT INTO t_student VALUES(104, '그마')";
-//			pstmt = conn.prepareStatement(sql);	//sql 처리 할 객체 생성(연결)
-//			pstmt.executeUpdate();	//수행 완료
+			String sql = "INSERT INTO t_student VALUES(104, '그마')";
+			pstmt = conn.prepareStatement(sql);	//sql 처리 할 객체 생성(연결)
+			pstmt.executeUpdate();	//수행 완료
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
