@@ -31,7 +31,7 @@
 				<td><%=member.getName() %></td>
 				<td><%=member.getGender() %></td>
 				<td><%=member.getJoinDate() %></td>
-				<td><input type="button" value="보기" /></td>
+				<td><a href="memberView.jsp?memberId=<%=member.getMemberId()%>"><input type="button" value="보기"/></a></td>
 			</tr>
 			<%
 				}

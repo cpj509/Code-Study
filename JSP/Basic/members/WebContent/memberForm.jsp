@@ -8,6 +8,7 @@
 <title>Welcome to our-site</title>
 <link rel="stylesheet" href="resources/css/style.css" />
 </head>
+<script type="text/javascript" src="resources/js/check.js"></script>
 <body>
 	<jsp:include page="menu.jsp"></jsp:include>
 	<div id="container">
@@ -30,7 +31,7 @@
 				</tr>
 				<tr>
 					<td>이름</td>
-					<td><input type="text" name="name" required="required"/></td>
+					<td><input type="text" name="name"/></td>
 				</tr>
 				<tr>
 					<td>성별</td>
@@ -41,7 +42,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input type="submit" value="등록" />
+						<input type="submit" value="등록" onclick="return checkMember()"/>
 						<input type="reset" value="취소" />
 					</td>
 				</tr>

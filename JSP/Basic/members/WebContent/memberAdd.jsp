@@ -9,11 +9,14 @@
 </head>
 <jsp:useBean id="member" class="com.jweb.Member"></jsp:useBean>
 <!-- Member member = new Member(); -->
-<jsp:setProperty property="memberId" name="member"/>
+
+<jsp:setProperty property="*" name="member"/>
+<%-- <jsp:setProperty property="memberId" name="member"/>
 <jsp:setProperty property="passwd" name="member"/>
 <jsp:setProperty property="name" name="member"/>
 <jsp:setProperty property="gender" name="member"/>
-<jsp:setProperty property="joinDate" name="member"/>
+<jsp:setProperty property="joinDate" name="member"/> --%>
+
 
 <jsp:useBean id="memDAO" class="com.jweb.MemberDAO"></jsp:useBean>
 <!-- MemberDAO memDAO = new MemberDAO(); -->
