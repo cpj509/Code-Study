@@ -9,7 +9,7 @@
 </head>
 <body>
 	<footer>
-		<p>&copy; World Job Friends : JMP Korea</p>
+		<p style="margin-left: 15%">&copy; World Job Friends : JMP Korea</p>
 	</footer>
 </body>
 </html>

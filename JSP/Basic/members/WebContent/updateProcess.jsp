@@ -7,13 +7,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<jsp:useBean id="member" class="com.jweb.Member"></jsp:useBean>
+<jsp:useBean id="member" class="com.jweb.member.Member"></jsp:useBean>
 <jsp:setProperty property="*" name="member"/>
 <%-- <jsp:setProperty property="passwd" name="member"/>
 <jsp:setProperty property="name" name="member"/>
 <jsp:setProperty property="gender" name="member"/>
 <jsp:setProperty property="memberId" name="member"/> --%>
-<jsp:useBean id="memDAO" class="com.jweb.MemberDAO" scope="application"></jsp:useBean>
+<jsp:useBean id="memDAO" class="com.jweb.member.MemberDAO" scope="application"></jsp:useBean>
 <%
 	memDAO.updateMember(member);
 	out.println("<script>alert('회원 정보가 수정 되었습니다.');");

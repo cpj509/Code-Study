@@ -1,4 +1,4 @@
-<%@page import="com.jweb.Member"%>
+<%@page import="com.jweb.member.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 <link rel="stylesheet" href="resources/css/style.css" />
 </head>
-<jsp:useBean id="memDAO" class="com.jweb.MemberDAO"></jsp:useBean>
+<jsp:useBean id="memDAO" class="com.jweb.member.MemberDAO"></jsp:useBean>
 <body>
 	<jsp:include page="menu.jsp"></jsp:include>
 	<div id="container">

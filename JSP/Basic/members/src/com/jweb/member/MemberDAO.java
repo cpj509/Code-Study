@@ -1,4 +1,4 @@
-package com.jweb;
+package com.jweb.member;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -28,6 +28,14 @@ public class MemberDAO {
 	}
 	
 	private void disconnect() {
+		if(rs != null) {
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		if(pstmt != null) {
 			try {
 				pstmt.close();
@@ -151,8 +159,30 @@ public class MemberDAO {
 		}finally {
 			disconnect();
 		}
+	}
+//	회원 로그인 체크 - 아이디, 비밀번호 일치: 1,  아이디 불일치 : 0, 비밀번호 불일치 : -1
+	public int login(String memberId, String passwd) {
+		connDB();
+		String sql = "select memberId, passwd from t_member where memberId = ?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memberId);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {//아이디 일치
+				String dbPw = rs.getString("passwd");
+				if(dbPw.equals(passwd)) {
+					return 1;
+				}else {
+					return -1;
+				}
+			}else {
+				return 0;//아이디 불일치
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
-	} 
-
-	
+		return -2;	//DB 오류
+	}
 }

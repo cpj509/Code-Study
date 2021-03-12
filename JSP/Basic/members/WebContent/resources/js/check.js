@@ -35,10 +35,11 @@ function checkMember(){
 		return false;
 	}
 	
-	if(name==""){
+	if(name == ""){
 		alert("이름을 입력 해 주세요.");
 		form.name.focus();
 		return false;
 	}
+	
 	form.submit();
 }

@@ -42,3 +42,15 @@ table, td{
 	height: 30px;
 	padding: 5px;
 }
+
+.table2{
+	width: 700px;
+	margin: 0 auto;
+}
+.table2 .w_title{
+	width: 650px;
+}
+.table2 textarea{
+	width: 95%;
+	height: 300px;
+}

@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<jsp:useBean id="member" class="com.jweb.Member"></jsp:useBean>
+<jsp:useBean id="member" class="com.jweb.member.Member"></jsp:useBean>
 <!-- Member member = new Member(); -->
 
 <jsp:setProperty property="*" name="member"/>
@@ -18,7 +18,7 @@
 <jsp:setProperty property="joinDate" name="member"/> --%>
 
 
-<jsp:useBean id="memDAO" class="com.jweb.MemberDAO"></jsp:useBean>
+<jsp:useBean id="memDAO" class="com.jweb.member.MemberDAO"></jsp:useBean>
 <!-- MemberDAO memDAO = new MemberDAO(); -->
 <%
 	memDAO.addMember(member);

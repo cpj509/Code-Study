@@ -1,4 +1,4 @@
-<%@page import="com.jweb.Member"%>
+<%@page import="com.jweb.member.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 <title>상세 보기</title>
 <link rel="stylesheet" href="resources/css/style.css" />
 </head>
-<jsp:useBean id="memDAO" class="com.jweb.MemberDAO" scope="application"></jsp:useBean>
+<jsp:useBean id="memDAO" class="com.jweb.member.MemberDAO" scope="application"></jsp:useBean>
 <%
 	String memId = request.getParameter("memberId");
 	Member member = memDAO.getOneMember(memId);
@@ -54,13 +54,18 @@
 			<tr>
 				<td>성 별</td>
 				<td>
+					<%if(member.getGender() == null){ %>
+					<input type="radio" name="gender" value="남"/>남
+					<input type="radio" name="gender" value="여" />여
+					<%} else{%>
 					<%if(member.getGender().equals("남")) {%>
 					<input type="radio" name="gender" value="남" checked="checked"/>남
 					<input type="radio" name="gender" value="여" />여
 					<%} else {%>
 					<input type="radio" name="gender" value="남" />남
 					<input type="radio" name="gender" value="여" checked="checked"/>여
-					<%} %>		
+					<%} 
+					}%>				
 				</td>
 			</tr>
 			<tr>
