@@ -1,56 +1,38 @@
 @charset "UTF-8";
-#container{
-	width: 100%;
-	margin: 0 auto;
-	text-align: center;
-}
+#container{width: 100%;margin: 0 auto;text-align: center;}
 .title{
-	height: 150px;
-	font-size: 1.7em;
+	height:140px;
+	font-size: 1.5em;
 	background: #eee;
 	line-height: 130px;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
-nav{
-	text-align: right;
-	font-size: 1.2em;
-}
-nav ul{
-	list-style: none;
-}
+nav{text-align: right; margin-top: 30px;margin-right: 20px;}
+nav ul{list-style: none;}
 nav ul li{
-	display: inline;
+	display:inline;
 	padding: 10px 20px;
-	margin-right: 20px;
 	border-top: 3px solid #222;
+	margin-right: 20px;
 }
-nav ul li a{
-	text-decoration: none;
-	color: #000;
-}
-nav ul li:hover {
-	background: #ccc;
-}
+nav ul li:hover{background: #ccc;}
+nav ul li a{text-decoration: none; color: #000}
+/* footer{margin-left: 25%;} */
 
-table{
-	width: 400px;
-	margin: 0 auto;
+table{width: 400px; margin: 0 auto;}
+table, td{border: 1px solid #ccc; border-collapse: collapse;
+          height: 30px; padding: 5px}
+ 
+input[type="text"], [type="password"]{
+	width: 200px; height: 20px;
 }
-table, td{
-	border: 1px solid #ccc;
-	border-collapse: collapse;
-	height: 30px;
-	padding: 5px;
-}
-
-.table2{
-	width: 700px;
-	margin: 0 auto;
-}
-.table2 .w_title{
-	width: 650px;
-}
-.table2 textarea{
-	width: 95%;
-	height: 300px;
+textarea{width:95%; height: 300px}
+a{text-decoration: none; color: black;}
+#table2{width: 700px; margin:0 auto}
+#table2 .w_title{width: 650px}
+#table3{width: 700px;}
+#table3 .input{width: 580px;}
+#table3 td:nth-child(2n-1){width: 70px;}
+.thead{
+	background-color: green;
 }

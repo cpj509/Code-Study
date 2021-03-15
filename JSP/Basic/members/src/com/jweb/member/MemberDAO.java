@@ -185,4 +185,26 @@ public class MemberDAO {
 		
 		return -2;	//DB 오류
 	}
+//	인증된 memberId의 이름 가져오는 메서드
+	public String getLoginNameById(String memberId) {
+		connDB();
+		String sql = "select * from t_member where memberId = ?";
+		String name = null;
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, memberId);
+			//쿼리 실행
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				name = rs.getString("name");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			disconnect();
+		}
+		return name;
+	}
 }

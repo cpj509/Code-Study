@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>글쓰기 양식</title>
 <link rel="stylesheet" href="resources/css/style.css" />
-<script type="text/javascript" src="resources/js/check.js"></script>
+<script type="text/javascript" src="resources/js/checkBoard.js"></script>
 </head>
 <%
 	//자바 부분
@@ -25,7 +25,7 @@
 			<h1>글쓰기</h1>
 		</div>
 		<form name="writeForm" action="boardWriteProcess.jsp" method="post">
-			<table class="table2">
+			<table id="table2">
 				<tr>
 					<td><input type="text" name="title" class="w_title" placeholder="글 제목" /></td>
 				</tr>
@@ -34,12 +34,13 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input type="submit" value="등록" onclick="return checkMember()"/>
+						<input type="button" value="등록" onclick="checkBoard()"/>
 						<input type="reset" value="취소" />
 					</td>
 				</tr>
 			</table>
 		</form>
 	</div>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

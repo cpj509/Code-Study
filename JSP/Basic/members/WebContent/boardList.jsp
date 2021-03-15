@@ -18,7 +18,7 @@
 			<h1>게시판 목록</h1>
 		</div>
 		<table>
-			<tr>
+			<tr class="thead">
 				<td>번호</td>
 				<td>글제목</td>
 				<td>작성자</td>
@@ -30,7 +30,7 @@
 			%>
 			<tr>
 				<td><%=board.getBnum() %></td>
-				<td><a href="boardView.jsp?Bnum=<%=board.getBnum() %>"><%=board.getTitle() %></a></td>
+				<td><a href="boardView.jsp?bnum=<%=board.getBnum() %>"><%=board.getTitle() %></a></td>
 				<td><%=board.getMemberId() %></td>
 				<td><%=board.getRegDate() %></td>
 			</tr>
@@ -42,5 +42,6 @@
 			</tr>
 		</table>
 	</div>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

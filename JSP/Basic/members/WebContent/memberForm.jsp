@@ -42,12 +42,13 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<input type="submit" value="등록" onclick="return checkMember()"/>
+						<input type="button" value="등록" onclick="checkMember()"/>
 						<input type="reset" value="취소" />
 					</td>
 				</tr>
 			</table>
 		</form>
 	</div>
+	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

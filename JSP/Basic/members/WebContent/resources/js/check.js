@@ -41,5 +41,5 @@ function checkMember(){
 		return false;
 	}
 	
-	form.submit();
+	form.submit();	//onclick이 들어간 input tag가 submit에 return checkmember면 필요 없음.
 }

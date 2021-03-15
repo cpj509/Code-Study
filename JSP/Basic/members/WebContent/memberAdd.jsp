@@ -22,7 +22,7 @@
 <!-- MemberDAO memDAO = new MemberDAO(); -->
 <%
 	memDAO.addMember(member);
-	response.sendRedirect("memberList.jsp");
+	response.sendRedirect("memberResult.jsp?msg=1");
 %>
 
 <body>

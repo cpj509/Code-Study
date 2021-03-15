@@ -18,7 +18,8 @@
 	memDAO.updateMember(member);
 	out.println("<script>alert('회원 정보가 수정 되었습니다.');");
 	//포워딩 방식
-	out.println("location.href='memberList.jsp';</script>");	//JavaScript에서 사용하는 방식
+	response.sendRedirect("memberResult.jsp?msg=0");
+	//out.println("location.href='memberList.jsp';</script>");	//JavaScript에서 사용하는 방식
 	//response.sendRedirect("memberList.jsp");	//jsp에서 사용하는 방식
 	//RequestDispatcher 클래스는 Servlet 등 여러 곳에서 사용.
 %>
