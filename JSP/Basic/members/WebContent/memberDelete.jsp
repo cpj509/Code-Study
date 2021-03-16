@@ -10,7 +10,8 @@
 <%
 	String memId = request.getParameter("memberId");
 	memDAO.deleteMember(memId);
-	response.sendRedirect("memberList.jsp");	//목록 페이지로 이동
+	//response.sendRedirect("memberList.jsp");	//목록 페이지로 이동
+	response.sendRedirect("memberResult.jsp?");
 %>
 <body>
 	

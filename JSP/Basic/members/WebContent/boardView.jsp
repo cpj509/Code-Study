@@ -14,14 +14,15 @@
 	String sessionId = null;
 	if(session.getAttribute("sessionId") != null){
 		sessionId = (String)session.getAttribute("sessionId");
-	} else{
-		out.println("<script>alert('로그인이 필요합니다.');location.href = 'loginForm.jsp';</script>");
 	}
 	//자료 수집
 	int bnum = 0;
 	if(request.getParameter("bnum") != null){
 		bnum = Integer.parseInt(request.getParameter("bnum"));
 	}
+	
+	//조회수 1 증가
+	boardDAO.updateHit(bnum);
 	
 	//dao - getOnBoard() 호출
 	Board board = boardDAO.getOneBoard(bnum);

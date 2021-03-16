@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>처리 결과 메시지</title>
+<link rel="stylesheet" href="resources/css/style.css" />
 </head>
 <jsp:useBean id="memDAO" class="com.jweb.member.MemberDAO" scope="application"></jsp:useBean>
 <%
@@ -18,7 +19,7 @@
 <body>
 	<jsp:include page="menu.jsp"></jsp:include>
 	<div id="container">
-		<div id="title">
+		<div class="title">
 			<h1>회원 정보</h1>
 		</div>
 		<div class="msg">

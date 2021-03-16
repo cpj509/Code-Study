@@ -14,17 +14,18 @@
 		<div class="title">
 			<h1>Welcome to World Job Friends</h1>
 		</div>
-		<div>
-			<img src="resources/images/eclipse.jpeg" width="400" height="350" />
+		<div class="mainimg">
+			<img src="resources/images/friends.png" />
 			<p><%
 					Date day = new Date();
 					int hour = day.getHours();
 					int minute = day.getMinutes();
-					int second = day.getSeconds();
+					//int second = day.getSeconds();
 					
-					out.print("현재 시간 : " + hour + ":" + minute + ":" + second);
+					//out.print("현재 시간 : " + hour + ":" + minute + ":" + second);
+					out.print("현재 시간 : " + hour + "시 " + minute + "분");
 					
-					response.setIntHeader("refresh", 1);
+					response.setIntHeader("refresh", 60);
 				%></p>
 		</div>
 	</div>

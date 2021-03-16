@@ -12,7 +12,7 @@
 
 	//dao - delete
 	boardDAO.deleteBoard(bnum);
-	response.sendRedirect("memberResult.jsp?");
+	response.sendRedirect("boardList.jsp");
 	
 %>
 <body>

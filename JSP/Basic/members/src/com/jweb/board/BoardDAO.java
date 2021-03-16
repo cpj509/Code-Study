@@ -76,7 +76,7 @@ public class BoardDAO {
 	public ArrayList<Board> getListAll(){
 		connDB();
 		ArrayList<Board> boardList = new ArrayList<Board>();
-		String sql = "select * from t_board";
+		String sql = "select * from t_board order by bnum desc";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
@@ -87,6 +87,7 @@ public class BoardDAO {
 				board.setContent(rs.getString("content"));
 				board.setRegDate(rs.getDate("regDate"));
 				board.setMemberId(rs.getString("memberId"));
+				board.setHit(rs.getInt("hit"));
 				boardList.add(board);
 			}
 		} catch (SQLException e) {
@@ -155,5 +156,31 @@ public class BoardDAO {
 			disconnect();
 		}
 		
+	}
+//	조회수 1 증가
+	public void updateHit(int bnum) {
+		connDB();
+		String sql = "select hit from t_board where bnum = ?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, bnum);
+			rs = pstmt.executeQuery();
+			int hit = 0;
+			if(rs.next()) {
+				hit = rs.getInt("hit") + 1;
+			}
+//			update
+			sql = "update t_board set hit = ? where bnum = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, hit);
+			pstmt.setInt(2, bnum);
+			
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			disconnect();
+		}
 	}
 }

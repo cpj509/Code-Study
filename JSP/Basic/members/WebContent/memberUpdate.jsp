@@ -18,9 +18,27 @@
 		var form = document.updateForm;
 		var pw1 = form.passwd.value;
 		var pw2 = form.passwd_confirm.value;
+		var name = form.name.value;
+		
+		var regExPw = /^[a-zA-Z0-9]{6,15}$/;	//중괄호는 글자 수 지정
+		var chk_num = pw1.search(/[0-9]/g);
+		var chk_eng = pw1.search(/[a-zA-Z]/g);
+		
+		if(!regExPw.test(pw1) || chk_num < 0 || chk_eng < 0){
+			alert("비밀번호는 영문자와 숫자의 조합으로 6 ~ 15자 까지 가능합니다.");
+			form.passwd.select();
+			return false;
+		}
+		
 		if(pw1 != pw2){
 			alert("비밀번호를 동일하게 입력 해 주세요.");
 			form.passwd_confirm.select();
+			return false;
+		}
+		
+		if(name == ""){
+			alert("이름을 입력 해 주세요.");
+			form.name.focus();
 			return false;
 		}
 		//form.submit();

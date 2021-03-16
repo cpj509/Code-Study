@@ -33,7 +33,7 @@
 		<ul>
 			<li><a href="main.jsp">Home</a></li>
 			<li><a href="logout.jsp">[<%=name %>님]로그아웃</a></li>
-			<li><a href="memberForm.jsp">회원 가입</a></li>
+			<li><a href="memberList.jsp">회원 목록</a></li>
 			<li><a href="boardList.jsp">게시판</a></li>
 		</ul>
 	<%} %>

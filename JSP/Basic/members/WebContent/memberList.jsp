@@ -15,8 +15,8 @@
 		<div class="title">
 			<h1>회원 목록</h1>
 		</div>
-		<table>
-			<tr>
+		<table id="table1">
+			<tr class="thead">
 				<td>아이디</td>
 				<td>이름</td>
 				<td>성별</td>

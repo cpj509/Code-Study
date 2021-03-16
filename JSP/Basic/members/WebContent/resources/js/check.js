@@ -41,5 +41,18 @@ function checkMember(){
 		return false;
 	}
 	
+	var genderCheck = 0;
+	
+	for(var i = 0; i < form.gender.length; i++){
+		if(form.gender[i].checked == true){
+			genderCheck++;
+			break;
+		}
+	}
+	if(genderCheck == 0){
+		alert("성별을 선택 해 주세요.");
+		return false;
+	}
+	
 	form.submit();	//onclick이 들어간 input tag가 submit에 return checkmember면 필요 없음.
 }

@@ -17,12 +17,13 @@
 		<div class="title">
 			<h1>게시판 목록</h1>
 		</div>
-		<table>
+		<table style="width: 700px">
 			<tr class="thead">
 				<td>번호</td>
 				<td>글제목</td>
 				<td>작성자</td>
 				<td>등록일</td>
+				<td>조회수</td>
 			</tr>
 			<%
 				//반복문 사용 출력
@@ -33,10 +34,11 @@
 				<td><a href="boardView.jsp?bnum=<%=board.getBnum() %>"><%=board.getTitle() %></a></td>
 				<td><%=board.getMemberId() %></td>
 				<td><%=board.getRegDate() %></td>
+				<td><%=board.getHit() %></td>
 			</tr>
 			<%} %>
 			<tr>
-				<td colspan="4">
+				<td colspan="5">
 					<a href="boardWriteForm.jsp"><input type="submit" value="글쓰기" /></a>
 				</td>
 			</tr>
