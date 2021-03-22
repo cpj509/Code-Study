@@ -4,12 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="resources/css/style.css" />
+<title>footer</title>
 </head>
 <body>
-	<footer>
-		<p style="margin-left: 15%">&copy; World Job Friends : JMP Korea</p>
+	<footer style="margin-left: 25%;">
+		<p>&copy; World Job Friends : JMP Korea
 	</footer>
 </body>
 </html>

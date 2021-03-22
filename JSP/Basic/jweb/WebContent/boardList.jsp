@@ -1,49 +1,45 @@
-<%@page import="com.jweb.board.Board"%>
-<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%request.setCharacterEncoding("utf-8"); %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>게시판 목록</title>
-<link rel="stylesheet" href="resources/css/style.css" />
+<link rel="stylesheet" href="resources/css/style.css">
 </head>
-<jsp:useBean id="boardDAO" class="com.jweb.board.BoardDAO" scope="application"></jsp:useBean>
 <body>
-	<jsp:include page="menu.jsp"></jsp:include>
+	<c:if test="${alert == 'update' }">
+		<script type="text/javascript">
+			alert("게시글이 수정되었습니다.");
+			//location.href = "boardList.jsp";
+		</script>
+	</c:if>
+	<jsp:include page="menu.jsp" />
 	<div id="container">
 		<div class="title">
 			<h1>게시판 목록</h1>
 		</div>
-		<table style="width: 700px">
+		<table id="table3">
 			<tr class="thead">
-				<td>번호</td>
-				<td>글제목</td>
-				<td>작성자</td>
-				<td>등록일</td>
-				<td>조회수</td>
-			</tr>
-			<%
-				//반복문 사용 출력
-				for(Board board : boardDAO.getListAll()){
-			%>
-			<tr>
-				<td><%=board.getBnum() %></td>
-				<td><a href="boardView.jsp?bnum=<%=board.getBnum() %>"><%=board.getTitle() %></a></td>
-				<td><%=board.getMemberId() %></td>
-				<td><%=board.getRegDate() %></td>
-				<td><%=board.getHit() %></td>
-			</tr>
-			<%} %>
-			<tr>
-				<td colspan="5">
-					<a href="boardWriteForm.jsp"><input type="submit" value="글쓰기" /></a>
-				</td>
-			</tr>
+				<td>번호</td><td>글제목</td><td>작성자</td><td>등록일</td><td>조회수</td>
+		    </tr>
+		    <c:forEach var="board" items="${boardList}">
+		    <tr>
+		    	<td>${board.bnum}</td>
+		    	<td><a href="boardView.do?bnum=${board.bnum}">${board.title}</a></td>
+		    	<td>${board.memberId}</td>
+		    	<td><fmt:formatDate value="${board.regDate }" pattern="yyyy-MM-dd hh:mm"/> </td>
+		    	<td><fmt:formatNumber value="${board.hit}"/></td>
+		    </tr>
+		    </c:forEach>
+		    <tr>
+		    	<td colspan="5">
+		    		<a href="boardWriteForm.do"><input type="submit" value="글쓰기"></a>
+		    	</td>
+		    </tr>
 		</table>
 	</div>
-	<jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

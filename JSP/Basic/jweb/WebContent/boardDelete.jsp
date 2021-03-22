@@ -5,15 +5,16 @@
 <head>
 </head>
 <!-- page, request, session, application -->
-<jsp:useBean id="boardDAO" class="com.jweb.board.BoardDAO" scope="application"></jsp:useBean>
+<jsp:useBean id="boardDAO" class="com.jweb.board.BoardDAO" scope="application" />
 <%
 	//자료 수집
 	int bnum = Integer.parseInt(request.getParameter("bnum"));
-
+	
 	//dao - delete
 	boardDAO.deleteBoard(bnum);
-	response.sendRedirect("boardList.jsp");
 	
+	//게시판 목록으로 이동
+	response.sendRedirect("boardList.jsp");
 %>
 <body>
 

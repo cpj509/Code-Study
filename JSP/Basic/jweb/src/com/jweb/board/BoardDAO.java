@@ -98,7 +98,7 @@ public class BoardDAO {
 		}	
 		return boardList;
 	}
-//	회원 1명 상세 보기 메서드
+//	게시글 상세 보기 메서드
 	public Board getOneBoard(int bnum) {
 		connDB();
 		String sql = "select * from t_board where bnum=?";
@@ -114,6 +114,7 @@ public class BoardDAO {
 			board.setContent(rs.getString("content"));
 			board.setRegDate(rs.getDate("regDate"));
 			board.setMemberId(rs.getString("memberId"));
+			board.setHit(rs.getInt("hit"));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

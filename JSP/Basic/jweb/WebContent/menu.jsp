@@ -7,7 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원</title>
-<link rel="stylesheet" href="resources/css/style.css" />
+<link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
 	<nav>
@@ -17,15 +17,15 @@
 			<li><a href="main.jsp">Home</a></li>
 			<li><a href="loginForm.do">로그인</a></li>
 			<li><a href="memberForm.do">회원 가입</a></li>
-			<li><a href="boardList.jsp">게시판</a></li>
+			<li><a href="boardList.do">게시판</a></li>
 		</ul>
 		</c:when>
 		<c:otherwise>
 		<ul>
 			<li><a href="main.jsp">Home</a></li>
-			<li><a href="logout.do">[님]로그아웃</a></li>
+			<li><a href="logout.do">[${name }]로그아웃</a></li>
 			<li><a href="memberView.do">회원 수정</a></li>
-			<li><a href="boardList.jsp">게시판</a></li>
+			<li><a href="boardList.do">게시판</a></li>
 		</ul>
 		</c:otherwise>
 	</c:choose>

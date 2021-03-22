@@ -34,6 +34,7 @@ a{text-decoration: none; color: black;}
 #table3{width: 700px;}
 #table3 .input{width: 580px;}
 #table3 td:nth-child(2n-1){width: 70px;}
+#table3 td:nth-child(2n){text-align: left; text-indent: 10px;}
 .thead{
 	background-color: #eee;
 }

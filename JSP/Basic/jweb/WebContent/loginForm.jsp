@@ -6,11 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>로그인 폼</title>
-<link rel="stylesheet" href="resources/css/style.css" />
-</head>
+<link rel="stylesheet" href="resources/css/style.css">
 <script type="text/javascript" src="resources/js/check.js"></script>
+</head>
 <body>
-	<jsp:include page="menu.jsp"></jsp:include>
+	<jsp:include page="menu.jsp" />
 	<div id="container">
 		<div class="title">
 			<h1>로그인</h1>
@@ -19,22 +19,21 @@
 			<table>
 				<tr>
 					<td>아이디</td>
-					<td><input type="text" name="memberId" placeholder="id" /></td>
+					<td><input type="text" name="memberId"></td>
 				</tr>
 				<tr>
 					<td>비밀번호</td>
-					<td><input type="password" name="passwd" placeholder="password"/></td>
+					<td><input type="password" name="passwd"></td>
 				</tr>
-				
 				<tr>
 					<td colspan="2">
-						<input type="submit" value="로그인" />
-						<input type="reset" value="취소" />
+						<input type="submit" value="로그인">
+						<input type="reset" value="취소">
 					</td>
 				</tr>
 			</table>
 		</form>
 	</div>
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>

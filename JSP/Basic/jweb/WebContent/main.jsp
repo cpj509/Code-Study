@@ -6,29 +6,32 @@
 <head>
 <meta charset="UTF-8">
 <title>Welcome to our-site</title>
-<link rel="stylesheet" href="resources/css/style.css" />
+<link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-	<jsp:include page="menu.jsp"></jsp:include>
+	<%-- <%@ page include file="menu.jsp" %> --%>
+	<jsp:include page="menu.jsp" />
 	<div id="container">
 		<div class="title">
 			<h1>Welcome to World Job Friends</h1>
 		</div>
 		<div class="mainimg">
-			<img src="resources/images/friends.png" />
-			<p><%
-					Date day = new Date();
-					int hour = day.getHours();
-					int minute = day.getMinutes();
-					//int second = day.getSeconds();
-					
-					//out.print("현재 시간 : " + hour + ":" + minute + ":" + second);
-					out.print("현재 시간 : " + hour + "시 " + minute + "분");
-					
-					response.setIntHeader("refresh", 60);
-				%></p>
+			<img src="resources/images/friends.png">
+			<p>
+			<%
+				Date day = new Date();
+				int hour = day.getHours();
+				int minute = day.getMinutes();
+				
+				
+				String ct = hour + "시 " + minute + "분";
+				
+				out.println("현재 접속 시각 : " + ct);
+				response.setIntHeader("Refresh", 60);
+				// 5초에 한번씩 새로 고침
+			%>
 		</div>
 	</div>
-	<jsp:include page="footer.jsp"></jsp:include>
+	<jsp:include page="footer.jsp" />
 </body>
 </html>
