@@ -8,14 +8,22 @@
 <script type="text/javascript" src="js/jquery-3.6.0.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$("#intro").css("color", "brown");
-		$("#pos").css("background", "yellow");
+		msg1();
+		$("#id1").click(function(){
+			$("#box").text("안녕하세요.");
+			$("#box").css("background", "pink");
+			
+		})
 	});
+	
+	function msg1(){
+		alert("msg1(): 문서 로드 후 자동으로 경고 창을 표시합니다.");
+	}
+	
 </script>
 </head>
 <body>
-	<h2>Welcome to WebMarket</h2>
-	<p id="intro">My Name is Steve</p>
-	<p id="pos">나는 캘리포니아에 살고 있다.</p>
+	<p><button id="id1">클릭하면 메시지를 변경합니다.</button></p>
+	<div id="box">메시지 : </div>
 </body>
 </html>

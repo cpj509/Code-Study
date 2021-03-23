@@ -1,13 +1,14 @@
-package com.jweb.member;
+package dao;
 
 import java.sql.Connection;
+
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class MemberDAO {
+public class MemberDAO2 {
 	private static String driverClass = "oracle.jdbc.OracleDriver";
 	private static String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	private static String username = "jweb";
