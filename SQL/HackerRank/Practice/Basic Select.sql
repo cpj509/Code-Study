@@ -15,6 +15,14 @@ where population > 120000 and countrycode = "USA";
 select *
 from city;
 
+-- Higher Than 75 Marks
+
+select name 
+from students 
+where marks > 75
+order by substr(name, -3);
+
+
 -- Select By ID
 
 select *
@@ -112,22 +120,3 @@ order by name;
 select name
 from employee
 where salary > 2000 and months < 10;
-
--- Type of Triangle
-
-select case
-    when A+B>C and A+C>B and B+C>A then
-        case
-        when A=B and B=C then 'Equilateral'
-        when A=B or B=C or A=C then 'Isosceles'
-        else 'Scalene'
-        end
-    else 'Not A Triangle'
-    end
-from triangles;
-
--- Revising Aggregations - The Count Function
-
-select count(name)
-from city
-where population > 100000;
