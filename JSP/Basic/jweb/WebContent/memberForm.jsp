@@ -22,7 +22,7 @@
 			dataType: "text",
 			async: false,
 			url: "http://localhost:8181/jweb/idcheck",
-			data: {id: t_id},	//id를 servlet에 보냄.
+			data: {id:t_id},	//id를 servlet에 보냄.
 			success: function(data, textStatus){
 				if(data == "usable"){
 					alert("사용할 수 있는 ID 입니다.");
